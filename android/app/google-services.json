@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479565086650",
+    "project_id": "toyota-a7993",
+    "storage_bucket": "toyota-a7993.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479565086650:android:9c9d939515c18662152783",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC64Pp6E5aUitbBarw1kmFdzxlnOr2Is4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
