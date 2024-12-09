@@ -1,6 +1,6 @@
 # flutter_application_1
 
-NIM : 5200411150 /t
+NIM : 5200411150 \t
 Nama : Angga Persada
 
 
