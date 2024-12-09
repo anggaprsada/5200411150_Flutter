@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_application_1/page/Login/register.dart';
 import 'package:flutter_application_1/page/navbar.dart';
 import 'firebase_options.dart';
 
@@ -45,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome Back,',
+              'Selamat Datang,',
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -53,19 +54,18 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(height: 10),
             Text(
-              'Log in now to continue',
+              'Masuk sekarang',
               style: TextStyle(color: Colors.white),
             ),
             SizedBox(height: 20),
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'Email',
-                hintText: 'Enter your email address',
+                hintText: 'Masukan alamat email anda',
                 prefixIcon: Icon(Icons.email),
                 border: OutlineInputBorder(),
-                filled: true, // Enable the fillColor
-                fillColor: Colors.white, // Set the background color to white
+                filled: true,
+                fillColor: Colors.white,
               ),
               keyboardType: TextInputType.emailAddress,
             ),
@@ -74,27 +74,50 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                hintText: 'Enter your password',
+                hintText: 'Masukan Password Anda',
                 prefixIcon: Icon(Icons.lock),
                 border: OutlineInputBorder(),
-                filled: true, // Enable the fillColor
-                fillColor: Colors.white, // Set the background color to white
+                filled: true,
+                fillColor: Colors.white,
               ),
             ),
             SizedBox(height: 20),
             Align(
-              alignment: Alignment.bottomRight,
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Forget password?',
-                  style: TextStyle(
-                    color: Colors.white, // Set text color
-                    fontSize: 16, // Set font size
-                    fontWeight: FontWeight.bold, // Set font weight
-                    decoration: TextDecoration.underline,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      print('Navigating to RegisterPage...');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                    },
+                    child: Text(
+                      'Daftar akun baru',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(width: 10),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Lupa password?',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 20),
@@ -112,10 +135,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               child: Text(
-                'LOGIN',
+                'MASUK',
                 style: TextStyle(
-                  color: Colors.red[600], // Set text color
-                  fontSize: 16, // Set font size
+                  color: Colors.red[600],
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
